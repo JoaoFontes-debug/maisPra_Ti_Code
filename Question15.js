@@ -6,7 +6,7 @@
 
 const prompt = require('prompt-sync')();
 
-function arithmeticMean(){
+function weightedMean(){
     
     let control =true;
     let divisor =0;
@@ -25,8 +25,8 @@ function arithmeticMean(){
             break;
         }
         divisor = Weight01+Weight02;
-        mediaPonderada = ((decimal01*Weight01)+(decimal02*Weight02))/divisor;
-        console.log("Media Ponderada ",mediaPonderada.toFixed(2) );
+        let weightedMean = ((decimal01*Weight01)+(decimal02*Weight02))/divisor;
+        console.log("Weighted mean: ",weightedMean.toFixed(2) );
 
 
     }while(control)
@@ -34,4 +34,4 @@ function arithmeticMean(){
     
 }
 
-arithmeticMean();
+weightedMean();
